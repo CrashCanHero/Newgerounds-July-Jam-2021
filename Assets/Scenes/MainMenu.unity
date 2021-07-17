@@ -308,9 +308,9 @@ RectTransform:
   m_Father: {fileID: 1513958490}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1076, y: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 485, y: 708}
   m_SizeDelta: {x: 556.2935, y: 47.3993}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &800563442
@@ -335,15 +335,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 6cf7bfad2b75ffd40aca747d8b14e1fc, type: 2}
+  m_sharedMaterial: {fileID: -8123472705704212797, guid: 6cf7bfad2b75ffd40aca747d8b14e1fc, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_fontColor: {r: 1, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -367,7 +367,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 4
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -442,8 +442,8 @@ RectTransform:
   m_Father: {fileID: 652001460}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 175, y: 600}
   m_SizeDelta: {x: 520.59375, y: 128.53125}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -860,7 +860,7 @@ VideoPlayer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1237315627}
-  m_Enabled: 1
+  m_Enabled: 0
   m_VideoClip: {fileID: 32900000, guid: 6f09a0c376cd2cf42a25a9e31127a54f, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
@@ -1171,13 +1171,14 @@ MonoBehaviour:
   VideoFile: -1
   isPlaying: 0
   Locations:
-  - 425
+  - 700
   - 200
   - 150
   - 100
-  - 75
-  - 75
-  easing: 200000000100000001000000010000002000000020000000
+  - 125
+  - 125
+  - 800
+  easing: 18000000010000000100000001000000200000002000000020000000
   items_To_Animate:
   - {fileID: 881811513}
   - {fileID: 1555530356}
@@ -1185,6 +1186,7 @@ MonoBehaviour:
   - {fileID: 1404365373}
   - {fileID: 1936524016}
   - {fileID: 1193472416}
+  - {fileID: 800563440}
   Video: {fileID: 1237315629}
   Backgrounds:
   - {fileID: 32900000, guid: 8f7991ae91f0e544093efa0322199695, type: 3}
@@ -1323,7 +1325,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 8400000, guid: c5a4aeae93c2fcb4b954a6449019c2a8, type: 2}
+  m_Texture: {fileID: 2800000, guid: 3e61129d8ad1757418f5fb0a1bf96ee8, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -1619,7 +1621,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1600, y: 900}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -1637,7 +1639,7 @@ Canvas:
   m_RenderMode: 0
   m_Camera: {fileID: 1604814558}
   m_PlaneDistance: 100
-  m_PixelPerfect: 0
+  m_PixelPerfect: 1
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
