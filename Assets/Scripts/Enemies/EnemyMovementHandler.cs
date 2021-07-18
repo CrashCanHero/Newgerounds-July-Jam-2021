@@ -10,8 +10,14 @@ public class EnemyMovementHandler : MonoBehaviour {
     float timer = 0;
     bool run = true;
 
+    private void Start() {
+        if(Movements.Length > 0) {
+            Movements[index].OnStart();
+        }
+    }
+
     private void Update() {
-        if(run) {
+        if(run && Movements.Length > 0) {
             timer += Time.deltaTime;
             Movements[index].Move(timer);
             if(timer >= Movements[index].Time) {
@@ -28,6 +34,7 @@ public class EnemyMovementHandler : MonoBehaviour {
                         run = false;
                     }
                 }
+                Movements[index].OnStart();
                 timer = 0f;
             }
         }

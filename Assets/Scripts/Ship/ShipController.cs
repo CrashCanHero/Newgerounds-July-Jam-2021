@@ -36,6 +36,7 @@ public class ShipController : MonoBehaviour {
 
     private void Update() {
         transform.position += GetAxis.To3D() * MoveSpeed * Time.deltaTime * (player.GetButton(SLOW) ? 0.2f : 1f);
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x, -Limits.x, Limits.x), 0f, Mathf.Clamp(transform.position.z, -Limits.y, Limits.y));
 
         if(player.GetButtonDown(SHOOT)) {
             shootTimer = ShootTime;
@@ -46,9 +47,5 @@ public class ShipController : MonoBehaviour {
             shootTimer = 0f;
         }
         shootTimer += Time.deltaTime;
-    }
-
-    private void LateUpdate() {
-        transform.position = new Vector3(Mathf.Clamp(transform.position.x, -Limits.x, Limits.x), 0f, Mathf.Clamp(transform.position.z, -Limits.y, Limits.y));
     }
 }

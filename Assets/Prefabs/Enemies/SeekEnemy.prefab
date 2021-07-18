@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 160239093265086040}
   - component: {fileID: 160239093265086047}
   - component: {fileID: 160239093265086037}
+  - component: {fileID: 2322863716736697537}
   m_Layer: 0
   m_Name: SeekEnemy
   m_TagString: Untagged
@@ -49,7 +50,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c64489ae42eabe04ea118e672c680227, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 15
+  Health: 6
   rend: {fileID: 1493589790857210783}
   DeathEffect: {fileID: 1884954727708983416, guid: 3392abacf0172884e80d413ee51d48ac, type: 3}
 --- !u!65 &160239093265086042
@@ -135,7 +136,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Dir: {x: 0, y: 0}
   Time: 10
-  Speed: 10
+  Speed: 25
   OneShot: 0
 --- !u!54 &160239093265086037
 Rigidbody:
@@ -153,6 +154,23 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &2322863716736697537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160239093265086046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8d44810e3d36e745854603d4b1a9457, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startActivated: 1
+  timeToDestroy: 12
+  onDestroyEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &160239093654006487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,6 +183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5293b6775d786e44a50629fce472fc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TurnTime: 2
 --- !u!1001 &160239092399121550
 PrefabInstance:
   m_ObjectHideFlags: 0

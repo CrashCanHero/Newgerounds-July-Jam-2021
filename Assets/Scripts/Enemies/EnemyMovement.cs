@@ -9,4 +9,6 @@ public class EnemyMovement : MonoBehaviour {
     public bool OneShot;
 
     public virtual void Move(float time) { }
+
+    public virtual void OnStart() { }
 }

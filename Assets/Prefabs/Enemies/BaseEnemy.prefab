@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 4513638705498717584}
   - component: {fileID: 2793469424689014392}
   - component: {fileID: 108563030}
+  - component: {fileID: -4540441127345222811}
   m_Layer: 0
   m_Name: BaseEnemy
   m_TagString: Untagged
@@ -164,8 +165,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c64489ae42eabe04ea118e672c680227, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 10
-  rend: {fileID: 0}
+  Health: 3
+  rend: {fileID: 1735341401658410694}
   DeathEffect: {fileID: 1884954727708983416, guid: 3392abacf0172884e80d413ee51d48ac, type: 3}
 --- !u!65 &4513638705498717586
 BoxCollider:
@@ -192,7 +193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3567f96b58ce08344b21b5402100444a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ArtPivot: {fileID: 0}
+  ArtPivot: {fileID: 2350827494872774626}
   SpinSpeed: 180
 --- !u!54 &4513638705498717585
 Rigidbody:
@@ -276,6 +277,23 @@ MonoBehaviour:
   Time: 1
   Speed: 5
   OneShot: 0
+--- !u!114 &-4540441127345222811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4513638705498717598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8d44810e3d36e745854603d4b1a9457, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startActivated: 1
+  timeToDestroy: 12
+  onDestroyEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &6900389691291783193
 GameObject:
   m_ObjectHideFlags: 0

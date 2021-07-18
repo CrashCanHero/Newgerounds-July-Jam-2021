@@ -18,7 +18,7 @@ public class ShipAnimator : MonoBehaviour {
         percent *= Multiplier;
         LeftWing.localEulerAngles = new Vector3(-percent, -percent * 2f, 0f);
         LeftWing.eulerAngles = new Vector3(LeftWing.eulerAngles.x, LeftWing.eulerAngles.y, -90f);
-        RightWing.localEulerAngles = new Vector3(-percent, -percent * 2f, 0f);
+        RightWing.localEulerAngles = new Vector3(-percent, percent * 2f, 0f);
         RightWing.eulerAngles = new Vector3(RightWing.eulerAngles.x, RightWing.eulerAngles.y, 90f);
 
         diff = transform.position.x - lastPos.x;
