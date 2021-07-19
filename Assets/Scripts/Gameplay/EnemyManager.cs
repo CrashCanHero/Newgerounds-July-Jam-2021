@@ -54,6 +54,6 @@ public class EnemyManager : MonoBehaviour {
 
     [Button]
     void SpawnTestWave() {
-        SpawnWave(EnemyWaveType.SeekEnemiesFromTop, Vector2.zero);
+        SpawnWave(EnemyWaveType.BasicEnemiesFromTopMiddle, Vector2.zero);
     }
 }

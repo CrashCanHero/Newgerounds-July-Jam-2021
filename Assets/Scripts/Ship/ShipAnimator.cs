@@ -11,6 +11,10 @@ public class ShipAnimator : MonoBehaviour {
 
     Vector3 lastPos;
 
+    private void Awake() {
+        lastPos = transform.position;
+    }
+
     private void Update() {
         float diff = transform.position.z - lastPos.z;
         float percent = diff / MaxDistanceDifference;

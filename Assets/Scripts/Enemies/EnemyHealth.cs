@@ -24,8 +24,10 @@ public class EnemyHealth : MonoBehaviour {
         if(other.GetComponent<ShipBullet>()) {
             Health--;
             StartCoroutine(FlashOnHit());
+            EnemyAudioHandler.Instance.PlayHit();
             if(Health <= 0) {
                 Instantiate(DeathEffect, transform.position, Quaternion.identity);
+                EnemyAudioHandler.Instance.PlayExplosion();
                 Destroy(gameObject);
             }
         }
