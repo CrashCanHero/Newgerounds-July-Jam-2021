@@ -23,7 +23,8 @@ public class ShipController : MonoBehaviour {
     public float FlashTime;
     public Renderer FlashRenderer;
 
-    public AudioSource Shoot, Hurt;
+    public AudioSource Shoot, Hurt, Death;
+    public GameObject DeathEffect;
 
     float shootTimer;
     float iTimer;
@@ -45,15 +46,28 @@ public class ShipController : MonoBehaviour {
     private void OnTriggerEnter(Collider other) {
         if(other.GetComponent<EnemyHealth>() && iTimer <= 0f) {
             Health--;
+            Health = Mathf.Clamp(Health, 0, 5);
+
+            if(Health == 0) {
+                Death.Play();
+                Instantiate(DeathEffect, transform.position, Quaternion.identity);
+                gameObject.SetActive(false);
+                return;
+            }
+
             Hurt.Play();
             iTimer = ITime;
+
             CameraHandler.Instance.RequestShake(0.5f, 0.2f);
             UIHandler.Instance.UpdateHealth(Health);
         }
     }
 
     private void Update() {
-        transform.position += GetAxis.To3D() * MoveSpeed * Time.deltaTime * (player.GetButton(SLOW) ? 0.2f : 1f) * (UIHandler.Instance.InCutscne ? 1f : 0f);
+        if(Health == 0) {
+            return;
+        }
+        transform.position += GetAxis.To3D() * MoveSpeed * Time.deltaTime * (player.GetButton(SLOW) ? 0.2f : 1f) * (UIHandler.Instance.InCutscne ? 0f : 1f);
         transform.position = new Vector3(Mathf.Clamp(transform.position.x, -Limits.x, Limits.x), 0f, Mathf.Clamp(transform.position.z, -Limits.y, Limits.y));
 
         if(player.GetButtonDown(SHOOT) && !UIHandler.Instance.InCutscne) {
