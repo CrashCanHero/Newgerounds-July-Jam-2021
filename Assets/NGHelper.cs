@@ -61,7 +61,7 @@ public class NGHelper : MonoBehaviour
         userScore.user = userNG.id;
         userScore.social = false;
         userScore.period = "A";
-        userScore.callWith(ngio_core);
+         userScore.callWith(ngio_core);
         StartCoroutine(GetTexture(userNG.icons.large));
     }
     public void unlockMedal(int MedalID)
