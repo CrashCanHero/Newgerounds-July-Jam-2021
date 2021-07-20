@@ -191,7 +191,7 @@ RectTransform:
   - {fileID: 1936524017}
   - {fileID: 1193472417}
   m_Father: {fileID: 1720336164}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -822,70 +822,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1193472416}
   m_CullTransparentMesh: 1
---- !u!1 &1237315627
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1237315628}
-  - component: {fileID: 1237315629}
-  m_Layer: 0
-  m_Name: Video
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1237315628
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1237315627}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3568.1719, y: -362.55746, z: -68.05033}
-  m_LocalScale: {x: 1.72043, y: 1.72043, z: 1.72043}
-  m_Children: []
-  m_Father: {fileID: 1720336164}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!328 &1237315629
-VideoPlayer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1237315627}
-  m_Enabled: 0
-  m_VideoClip: {fileID: 32900000, guid: 6f09a0c376cd2cf42a25a9e31127a54f, type: 3}
-  m_TargetCameraAlpha: 1
-  m_TargetCamera3DLayout: 0
-  m_TargetCamera: {fileID: 0}
-  m_TargetTexture: {fileID: 8400000, guid: c5a4aeae93c2fcb4b954a6449019c2a8, type: 2}
-  m_TimeReference: 0
-  m_TargetMaterialRenderer: {fileID: 0}
-  m_TargetMaterialProperty: _MainTex
-  m_RenderMode: 2
-  m_AspectRatio: 2
-  m_DataSource: 0
-  m_PlaybackSpeed: 1
-  m_AudioOutputMode: 2
-  m_TargetAudioSources: []
-  m_DirectAudioVolumes: []
-  m_Url: 
-  m_EnabledAudioTracks: 
-  m_DirectAudioMutes: 
-  m_ControlledAudioTrackCount: 0
-  m_PlayOnAwake: 1
-  m_SkipOnDrop: 1
-  m_Looping: 1
-  m_WaitForFirstFrame: 1
-  m_FrameReadyEventEnabled: 0
-  m_VideoShaders: []
 --- !u!1 &1333924253
 GameObject:
   m_ObjectHideFlags: 0
@@ -898,7 +834,6 @@ GameObject:
   - component: {fileID: 1333924257}
   - component: {fileID: 1333924256}
   - component: {fileID: 1333924255}
-  - component: {fileID: 1333924258}
   m_Layer: 5
   m_Name: Stats
   m_TagString: Untagged
@@ -970,10 +905,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 652001461}
-        m_TargetAssemblyTypeName: Title_Controls, Assembly-CSharp
-        m_MethodName: buttonPress
-        m_Mode: 3
+      - m_Target: {fileID: 1420069520}
+        m_TargetAssemblyTypeName: Title_Anim, Assembly-CSharp
+        m_MethodName: Stats
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1020,35 +955,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1333924253}
   m_CullTransparentMesh: 1
---- !u!114 &1333924258
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1333924253}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1420069520}
-          m_TargetAssemblyTypeName: Title_Anim, Assembly-CSharp
-          m_MethodName: setVideo
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &1404365373
 GameObject:
   m_ObjectHideFlags: 0
@@ -1168,8 +1074,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Target: 0
-  VideoFile: -1
-  isPlaying: 0
   Locations:
   - 700
   - 200
@@ -1178,8 +1082,10 @@ MonoBehaviour:
   - 125
   - 125
   - 800
-  Locations_Stats: []
+  Locations_Stats_Out: []
+  Locations_Stats_In: []
   easing: 18000000010000000100000001000000200000002000000020000000
+  easing_Stats: 
   items_To_Animate:
   - {fileID: 881811513}
   - {fileID: 1555530356}
@@ -1188,12 +1094,8 @@ MonoBehaviour:
   - {fileID: 1936524016}
   - {fileID: 1193472416}
   - {fileID: 800563440}
-  Video: {fileID: 1237315629}
-  Backgrounds:
-  - {fileID: 32900000, guid: 8f7991ae91f0e544093efa0322199695, type: 3}
-  - {fileID: 32900000, guid: 0ae4e840c186495478c037e158dabc2a, type: 3}
-  - {fileID: 32900000, guid: 7f588a80eef88414bbbe9f858bcc74e3, type: 3}
-  - {fileID: 32900000, guid: 066b0c2179c91f54d9a2fd2e052574e9, type: 3}
+  items_To_Animate_Stats: []
+  back: {fileID: 1434682071}
 --- !u!1 &1422143642
 GameObject:
   m_ObjectHideFlags: 0
@@ -1299,13 +1201,13 @@ RectTransform:
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 1720336164}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -750, y: 750}
+  m_AnchoredPosition: {x: 1400, y: -1400}
   m_SizeDelta: {x: 2048, y: 2048}
-  m_Pivot: {x: 0, y: 1}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1434682073
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1371,7 +1273,7 @@ RectTransform:
   - {fileID: 1027807256}
   - {fileID: 800563441}
   m_Father: {fileID: 1720336164}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1660,7 +1562,6 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 1237315628}
   - {fileID: 1434682072}
   - {fileID: 652001460}
   - {fileID: 1513958490}

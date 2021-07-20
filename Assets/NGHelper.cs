@@ -35,8 +35,6 @@ public class NGHelper : MonoBehaviour
                 }
             });
         });
-        unlockMedal(63942);
-        uploadScore(10453, 0);
     }
 
     private void requestLogin()
@@ -58,6 +56,12 @@ public class NGHelper : MonoBehaviour
     {
         userNG = ngio_core.current_user;
         playerText.text = userNG.name;
+        io.newgrounds.components.ScoreBoard.getScores userScore = new io.newgrounds.components.ScoreBoard.getScores();
+        userScore.id = 0;
+        userScore.user = userNG.id;
+        userScore.social = false;
+        userScore.period = "A";
+        userScore.callWith(ngio_core);
         StartCoroutine(GetTexture(userNG.icons.large));
     }
     public void unlockMedal(int MedalID)
