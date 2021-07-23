@@ -18,6 +18,7 @@ public class EnemyHealth : MonoBehaviour {
     }
 
     private void Awake() {
+        GameManager.Instance.EnemyCount++;
         material = rend.material;
     }
 
@@ -31,6 +32,7 @@ public class EnemyHealth : MonoBehaviour {
                 EnemyAudioHandler.Instance.PlayExplosion();
                 CameraHandler.Instance.RequestShake(0.1f, 0.1f);
                 UIHandler.Instance.Score += ScoreToAdd;
+                GameManager.Instance.EnemyCount--;
                 Destroy(gameObject);
             }
         }
