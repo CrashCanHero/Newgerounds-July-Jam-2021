@@ -1,3 +1,22 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:dd043796f67c47ffebc47323d668e7dea7771e364eb24142c0f989bd232d459f
-size 291
+fileFormatVersion: 2
+guid: 142410a998465ef4099aaeee5610474a
+labels:
+- Input
+- Joysticks
+- Controllers
+- Rewired
+- Hotplugging
+- Keyboard
+- Mouse
+- Touch
+- InputManager
+- Control
+- Gamepad
+- Controller
+- Joystick
+- Xbox360
+- XInput
+- DirectInput
+- RawInput
+NativeFormatImporter:
+  userData: 

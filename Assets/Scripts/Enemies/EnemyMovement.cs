@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e64f59c9e50c7fa0dac76a0565bcbfd1533686125e69e6d8b1924d8f5232f375
-size 307
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class EnemyMovement : MonoBehaviour {
+    public Vector2 Dir;
+    public float Time;
+    public float Speed;
+    public bool OneShot;
+
+    public virtual void Move(float time) { }
+
+    public virtual void OnStart() { }
+}

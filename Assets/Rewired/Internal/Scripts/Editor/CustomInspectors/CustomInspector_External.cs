@@ -1,3 +1,26 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:908a18e46ba966848876c44aeedc1263c4793124754ea56d8c1fb48d40ffa940
-size 737
+﻿// Copyright (c) 2014 Augie R. Maddox, Guavaman Enterprises. All rights reserved.
+#pragma warning disable 0219
+#pragma warning disable 0618
+#pragma warning disable 0649
+
+namespace Rewired.Editor {
+
+    using UnityEngine;
+    using UnityEditor;
+    using Rewired;
+
+    [System.ComponentModel.Browsable(false)]
+    [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+    public abstract class CustomInspector_External : UnityEditor.Editor {
+
+        protected CustomInspector_Internal internalEditor;
+
+        override public void OnInspectorGUI() {
+            internalEditor.OnInspectorGUI();
+        }
+
+        protected void Enabled() {
+            internalEditor.OnEnable();
+        }
+    }
+}

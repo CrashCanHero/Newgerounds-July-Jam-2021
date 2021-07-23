@@ -1,3 +1,44 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:850fe4f946f0bdcfb67edceda137375c39bb4c749672cf431b61827165a7723f
-size 953
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class MusicPlayer : MonoBehaviour {
+    public static MusicPlayer Instance;
+    public AudioSource IntroSource, LoopSource;
+
+    public bool Intro = true;
+
+    private void Awake() {
+        if(!Instance) {
+            Instance = this;
+        }        
+    }
+
+    private void Update() {
+        if(Intro) {
+            if(!IntroSource.isPlaying) {
+                IntroSource.Play();
+            }
+
+            if(IntroSource.time / IntroSource.clip.length >= 0.95f) {
+                Intro = false;
+                LoopSource.Play();
+            }
+            return;
+        }
+
+        if(LoopSource.time / LoopSource.clip.length >= 0.95f) {
+            LoopSource.time = 0f;
+        }
+    }
+
+    public void Stop() {
+        IntroSource.Stop();
+        LoopSource.Stop();
+    }
+
+    public void Play() {
+        Intro = true;
+        IntroSource.Play();
+    }
+}

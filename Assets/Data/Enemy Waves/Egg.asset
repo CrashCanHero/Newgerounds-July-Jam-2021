@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:81bff5a6ddece2a3ebe213ca1bee4b51c1da7a78993dc037bccde52bc4852e9f
-size 533
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 170b66d699d8cc04ea2bf0154f0d62f9, type: 3}
+  m_Name: Egg
+  m_EditorClassIdentifier: 
+  Enemies:
+  - Enemy: {fileID: 7833410601333413140, guid: 3ae9387a7401e3d42823a3c9558e35dc, type: 3}
+    Position: {x: 0, y: 20}
+    Time: 0

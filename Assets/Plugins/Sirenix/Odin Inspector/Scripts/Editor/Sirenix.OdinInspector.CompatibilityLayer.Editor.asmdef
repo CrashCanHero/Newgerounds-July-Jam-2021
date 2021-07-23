@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:fc691f1bab094bb47879e005923f9cd145fb899cdee658fcb5f28ae54b8df582
-size 373
+{
+    "name": "Sirenix.OdinInspector.CompatibilityLayer.Editor",
+    "references": [
+        "Sirenix.OdinInspector.CompatibilityLayer"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "autoReferenced": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "defineConstraints": []
+}

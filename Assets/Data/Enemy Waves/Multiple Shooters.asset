@@ -1,3 +1,27 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3f545a1322b6a0e1833ccf4fef45228f23fda58f257bf3188f69c61146b88276
-size 940
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 170b66d699d8cc04ea2bf0154f0d62f9, type: 3}
+  m_Name: Multiple Shooters
+  m_EditorClassIdentifier: 
+  Enemies:
+  - Enemy: {fileID: 6578603389226231849, guid: 252433c16f0a2cd4a8681cedfddca595, type: 3}
+    Position: {x: 0, y: 20}
+    Time: 0
+  - Enemy: {fileID: 6578603389226231849, guid: 252433c16f0a2cd4a8681cedfddca595, type: 3}
+    Position: {x: -5, y: 20}
+    Time: 0
+  - Enemy: {fileID: 6578603389226231849, guid: 252433c16f0a2cd4a8681cedfddca595, type: 3}
+    Position: {x: 6, y: 20}
+    Time: 0
+  - Enemy: {fileID: 6578603389226231849, guid: 252433c16f0a2cd4a8681cedfddca595, type: 3}
+    Position: {x: -10, y: 20}
+    Time: 0

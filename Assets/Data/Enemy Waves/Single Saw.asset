@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:bd1832fd3db76ac6637df0bd64690b54392cdf12cd4f95fdc109686727976226
-size 542
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 170b66d699d8cc04ea2bf0154f0d62f9, type: 3}
+  m_Name: Single Saw
+  m_EditorClassIdentifier: 
+  Enemies:
+  - Enemy: {fileID: 6784237665553636287, guid: 76f940b5acbd6c14c96bb68fc7f709f9, type: 3}
+    Position: {x: -30, y: 20}
+    Time: 0

@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:26ab574d8e6530457429c7ba8fd08783f09d6fbeafb511bacbbd6bcb56e42323
-size 399
+﻿// Copyright (c) 2015 Augie R. Maddox, Guavaman Enterprises. All rights reserved.
+#pragma warning disable 0219
+#pragma warning disable 0618
+#pragma warning disable 0649
+
+namespace Rewired.UI.ControlMapper {
+
+    using UnityEngine;
+    using UnityEngine.UI;
+    using System.Collections;
+    using Rewired;
+
+    [AddComponentMenu("")]
+    public class ButtonInfo : UIElementInfo {
+        
+    }
+}

@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3dd38f7e81b26853f8f1ad6c0d40304e3a0fef7dc2c86fda9af782a011e32f0a
-size 484
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a493a11cd0348ee47bbf83938e5b89b6, type: 3}
+  m_Name: Basic Egg
+  m_EditorClassIdentifier: 
+  Name: Egg
+  Description: Pretty normal egg, if you don't count the incredible taste

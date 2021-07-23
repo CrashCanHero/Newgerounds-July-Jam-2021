@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c6c1c023515910c4b1b08362a27f7d27077ff7549ce7cf4689b4489ef09ea3d6
-size 367
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class BaseEnemySpin : MonoBehaviour {
+    public Transform ArtPivot;
+    public float SpinSpeed;
+
+    private void Update() {
+        ArtPivot.eulerAngles = new Vector3(ArtPivot.eulerAngles.x, ArtPivot.eulerAngles.y + (SpinSpeed * Time.deltaTime), ArtPivot.eulerAngles.z);
+    }
+}

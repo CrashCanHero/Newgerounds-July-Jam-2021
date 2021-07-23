@@ -1,3 +1,39 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9317e59305a524a11b8d66ee5780bb3b9b80443363c35ea2f1b26eb1d69044bb
-size 901
+using System.Collections;
+using System.Collections.Generic;
+
+using TMPro;
+
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class Test_Load : MonoBehaviour
+{
+    public TMP_Text text;
+    public string scene;
+    AsyncOperation load;
+
+    bool visuals;
+
+    IEnumerator FadeLevel() {
+        GlobalCanvas.Instance.FadeController.FadeOut();
+        yield return new WaitForSeconds(1f);
+        SceneManager.UnloadSceneAsync("Loading");
+        GlobalCanvas.Instance.FadeController.FadeIn();
+    }
+
+    void Start()
+    {
+        load = SceneManager.LoadSceneAsync(scene, LoadSceneMode.Additive);
+    }
+
+    void Update()
+    {
+        float percent = Mathf.Clamp01(load.progress / 0.9f);
+        text.text = "Loading... " + Mathf.Round(percent * 100) + "%";
+
+        if(percent >= 0.95f && !visuals) {
+            StartCoroutine(FadeLevel());
+            visuals = true;
+        }
+    }
+}
