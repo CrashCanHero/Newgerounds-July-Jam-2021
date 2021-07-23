@@ -1,21 +1,3 @@
-﻿// Copyright (c) 2015 Augie R. Maddox, Guavaman Enterprises. All rights reserved.
-#pragma warning disable 0219
-#pragma warning disable 0618
-#pragma warning disable 0649
-
-namespace Rewired.UI.ControlMapper {
-
-    using UnityEngine;
-    using UnityEngine.UI;
-    using System.Collections;
-    using Rewired;
-
-    [AddComponentMenu("")]
-    public class InputFieldInfo : UIElementInfo {
-        public int actionId { get; set; }
-        public AxisRange axisRange { get; set; }
-        public int actionElementMapId { get; set; }
-        public ControllerType controllerType { get; set; }
-        public int controllerId { get; set; }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:fe66aa67f584915734c7a5f1249859cf05315b2d1f61f8d89657a06972851d57
+size 642

@@ -1,17 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class DestroyAfterTime : MonoBehaviour {
-    public float Time;
-
-    float timer;
-
-    private void Update() {
-        timer += UnityEngine.Time.deltaTime;
-
-        if(timer >= Time) {
-            Destroy(gameObject);
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0503f88ee91c1c43f87fb763de36d47370a8d2fec2d0436260addc6e9e0ff96d
+size 322

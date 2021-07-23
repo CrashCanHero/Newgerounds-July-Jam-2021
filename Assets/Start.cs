@@ -1,15 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.SceneManagement;
-
-public class Start : MonoBehaviour
-{
-    // Start is called before the first frame update
-    public GameObject Newgrounds;
-    public void Play() 
-    {
-        DontDestroyOnLoad(Newgrounds);
-        SceneManager.LoadScene("Loading");
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:89751605e8bf92b72c1dcfda304cc3a087b70f704125f27c81f6bb2ed17f512f
+size 359

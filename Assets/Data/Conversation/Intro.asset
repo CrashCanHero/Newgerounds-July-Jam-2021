@@ -1,35 +1,3 @@
-%YAML 1.1
-%TAG !u! tag:unity3d.com,2011:
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4fd7385749c976469f1bee7d99f8f79, type: 3}
-  m_Name: Intro
-  m_EditorClassIdentifier: 
-  Lines:
-  - Name: You
-    Line: Okay, launch looks good
-  - Name: You
-    Line: Let's run over the ship controls real quick
-  - Name: You
-    Line: Arrow keys to move
-  - Name: You
-    Line: Z to fire my on-board machine laser
-  - Name: You
-    Line: X to go into slow movement mode
-  - Name: You
-    Line: Got a lot of traveling to do, better keep my eyes open, scanners show movement
-      up ahead.
-  - Name: You
-    Line: Remember, the ship's scanners will show any enemy in red, eggs in green,
-      and me in white.
-  - Name: You
-    Line: Get the eggs and get home safe
-  - Name: You
-    Line: This omelette better be worth it
+version https://git-lfs.github.com/spec/v1
+oid sha256:9d5ecf176256e291ce42ade9ecf42d2bd058a85ba7814b3f12be98a894271acb
+size 1029

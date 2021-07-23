@@ -1,25 +1,3 @@
-fileFormatVersion: 2
-guid: 58e661f99f206c148b77ca6b284335e1
-labels:
-- Input
-- Joysticks
-- Controllers
-- Rewired
-- Hotplugging
-- Keyboard
-- Mouse
-- Touch
-- InputManager
-- Control
-- Gamepad
-- Controller
-- Joystick
-- Xbox360
-- XInput
-- DirectInput
-MonoImporter:
-  serializedVersion: 2
-  defaultReferences: []
-  executionOrder: 0
-  icon: {instanceID: 0}
-  userData: 
+version https://git-lfs.github.com/spec/v1
+oid sha256:3eb66efb8f6dabc7c269ae8515247050e35fd50d7603807021babbbda193e822
+size 363

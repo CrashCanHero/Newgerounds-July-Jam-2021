@@ -1,35 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class EnemyHealth : MonoBehaviour {
-    public int Health;
-    public Renderer rend;
-    public GameObject DeathEffect;
-    Material material;
-
-    IEnumerator FlashOnHit() {
-        material.SetFloat("_DelaunayStrength1", 100f);
-        material.SetFloat("_DelaunayStrength2", 100f);
-        yield return new WaitForSeconds(0.2f);
-        material.SetFloat("_DelaunayStrength1", 2.41f);
-        material.SetFloat("_DelaunayStrength2", 3.9f);
-    }
-
-    private void Awake() {
-        material = rend.material;
-    }
-
-    private void OnTriggerEnter(Collider other) {
-        if(other.GetComponent<ShipBullet>()) {
-            Health--;
-            StartCoroutine(FlashOnHit());
-            EnemyAudioHandler.Instance.PlayHit();
-            if(Health <= 0) {
-                Instantiate(DeathEffect, transform.position, Quaternion.identity);
-                EnemyAudioHandler.Instance.PlayExplosion();
-                Destroy(gameObject);
-            }
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b8d58052b84b5fe37eac658e24648f244d579cbbcbca16a6e67c8a13528d360c
+size 1207

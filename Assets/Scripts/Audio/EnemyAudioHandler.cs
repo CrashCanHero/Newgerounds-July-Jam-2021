@@ -1,24 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class EnemyAudioHandler : MonoBehaviour {
-    public static EnemyAudioHandler Instance;
-
-    public AudioSource Explosion;
-    public AudioSource Hit;
-
-    private void Awake() {
-        if(!Instance) {
-            Instance = this;
-        }
-    }
-
-    public void PlayExplosion() {
-        Explosion.Play();
-    }
-
-    public void PlayHit() {
-        Hit.Play();
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:8a9227b6afc70122b147e070c6c911296801d7a66fcab7f1a4ec3c4ec6f54a97
+size 458

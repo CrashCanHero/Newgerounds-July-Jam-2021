@@ -1,22 +1,3 @@
-﻿// Copyright (c) 2018 Augie R. Maddox, Guavaman Enterprises. All rights reserved.
-#pragma warning disable 0219
-#pragma warning disable 0618
-#pragma warning disable 0649
-
-namespace Rewired.Editor {
-
-    using UnityEngine;
-    using UnityEditor;
-    using Rewired;
-
-    [System.ComponentModel.Browsable(false)]
-    [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
-    [CustomEditor(typeof(Initializer))]
-    public sealed class InitializerInspector : CustomInspector_External {
-
-        private void OnEnable() {
-            internalEditor = new InitializerInspector_Internal(this);
-            internalEditor.OnEnable();
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:cfc04b0f4020417685cd9789dd2bded0da6ae21e8818de77f1dc76f8b18c29e6
+size 681

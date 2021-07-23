@@ -1,25 +1,3 @@
-using System;
-using System.Collections.Generic;
-using SimpleJSON;
-
-namespace io.newgrounds.objects {
-
-	/// <summary>
-	/// A model for 'error' data.
-	/// </summary>
-	public class error : Model
-	{
-	
-		/// <summary>
-		/// A code indication the error type. 
-		/// </summary>
-		public int code { get; set; }
-
-		/// <summary>
-		/// Contains details about the error. 
-		/// </summary>
-		public string message { get; set; }
-
-
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1bfe4862cfe9597b36b502d1b7c6063b2b6a4bd4c254fabeb162664445e7789e
+size 422

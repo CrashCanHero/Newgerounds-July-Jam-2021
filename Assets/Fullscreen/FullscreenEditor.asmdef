@@ -1,15 +1,3 @@
-{
-    "name": "FullscreenEditor",
-    "references": [],
-    "optionalUnityReferences": [],
-    "includePlatforms": [
-        "Editor"
-    ],
-    "excludePlatforms": [],
-    "allowUnsafeCode": true,
-    "overrideReferences": false,
-    "precompiledReferences": [],
-    "autoReferenced": true,
-    "defineConstraints": [],
-    "versionDefines": []
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6b236c97a8fd358c94f87d612d521311bdeacea29cb5e7d830dc01f5c00ae6e6
+size 347
