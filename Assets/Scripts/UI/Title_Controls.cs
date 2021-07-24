@@ -6,6 +6,6 @@ public class Title_Controls : MonoBehaviour
 {
     public void buttonPress(int id) 
     {
-        Debug.Log("Pressed! " + id.ToString());
+
     }
 }
