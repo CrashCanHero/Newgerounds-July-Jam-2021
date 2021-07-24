@@ -22,7 +22,7 @@ public class EnemyManager : MonoBehaviour {
     public float MapTime;
     public bool RunMap;
 
-    int waveIndex;
+    [HideInInspector]public int waveIndex;
 
     IEnumerator SpawnWave(EnemyWave Wave, Vector2 Offset) {
         float timer = 0f;
@@ -40,9 +40,12 @@ public class EnemyManager : MonoBehaviour {
     }
 
     private void Awake() {
-        if(!Instance) {
-            Instance = this;
+        if(Instance) {
+            return;
         }
+
+        Instance = this;
+        GameManager.Instance.OnSceneUnload += Unload;
     }
 
     private void Update() {
@@ -64,6 +67,14 @@ public class EnemyManager : MonoBehaviour {
 
     public void SpawnWave(EnemyWaveType Type, Vector2 Offset) {
         StartCoroutine(SpawnWave(Waves[(int)Type], Offset));
+    }
+
+    void Unload(UnityEngine.SceneManagement.Scene scene) {
+        if(scene.name != "Game") {
+            return;
+        }
+        Instance = null;
+        GameManager.Instance.OnSceneUnload -= Unload;
     }
 
     [Button]

@@ -9,9 +9,11 @@ public class MusicPlayer : MonoBehaviour {
     public bool Intro = true;
 
     private void Awake() {
-        if(!Instance) {
-            Instance = this;
-        }        
+        if(Instance) {
+            return;
+        }
+        Instance = this;
+        GameManager.Instance.OnSceneUnload += Unload;
     }
 
     private void Update() {
@@ -40,5 +42,13 @@ public class MusicPlayer : MonoBehaviour {
     public void Play() {
         Intro = true;
         IntroSource.Play();
+    }
+
+    void Unload(UnityEngine.SceneManagement.Scene scene) {
+        if(scene.name != "Game") {
+            return;
+        }
+        Instance = null;
+        GameManager.Instance.OnSceneUnload -= Unload;
     }
 }

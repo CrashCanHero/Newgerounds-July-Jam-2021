@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using Toolnity;
 
 public class GameManager : MonoBehaviour {
     public static GameManager Instance;
@@ -9,8 +11,10 @@ public class GameManager : MonoBehaviour {
 
     public delegate void OnShipDeathEvent();
     public delegate void OnLevelCompleteEvent();
+    public delegate void OnSceneUnloadEvent(Scene scene);
     public event OnShipDeathEvent OnShipDeath;
     public event OnLevelCompleteEvent OnLevelComplete;
+    public event OnSceneUnloadEvent OnSceneUnload;
 
     int lastEnemyCount;
 
@@ -38,6 +42,10 @@ public class GameManager : MonoBehaviour {
             Instance = this;
             DontDestroyOnLoad(gameObject);
         }
+        else {
+            Destroy(gameObject);
+        }
+        SceneManager.sceneUnloaded += SceneUnload;
     }
 
     private void Update() {
@@ -52,5 +60,9 @@ public class GameManager : MonoBehaviour {
     public void GameOver() {
         StartCoroutine(ShipDeath());
         OnShipDeath?.Invoke();
+    }
+
+    void SceneUnload(Scene scene) {
+        OnSceneUnload?.Invoke(scene);
     }
 }

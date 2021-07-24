@@ -9,9 +9,12 @@ public class EnemyAudioHandler : MonoBehaviour {
     public AudioSource Hit;
 
     private void Awake() {
-        if(!Instance) {
-            Instance = this;
+        if(Instance) {
+            return;
         }
+
+        Instance = this;
+        GameManager.Instance.OnSceneUnload += Unload;
     }
 
     public void PlayExplosion() {
@@ -20,5 +23,13 @@ public class EnemyAudioHandler : MonoBehaviour {
 
     public void PlayHit() {
         Hit.Play();
+    }
+
+    void Unload(UnityEngine.SceneManagement.Scene scene) {
+        if(scene.name != "Game") {
+            return;
+        }
+        Instance = null;
+        GameManager.Instance.OnSceneUnload -= Unload;
     }
 }

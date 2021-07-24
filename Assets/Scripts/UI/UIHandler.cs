@@ -36,9 +36,12 @@ public class UIHandler : MonoBehaviour {
     ulong visualScore;
 
     private void Awake() {
-        if(!Instance) {
-            Instance = this;
+        if(Instance) {
+            return;
         }
+
+        Instance = this;
+        GameManager.Instance.OnSceneUnload += Unload;
 
         OnLastTextBox += LastTextBox;
     }
@@ -134,5 +137,13 @@ public class UIHandler : MonoBehaviour {
 
     void LastTextBox() {
         EnemyManager.Instance.RunMap = true;
+    }
+
+    void Unload(UnityEngine.SceneManagement.Scene scene) {
+        if(scene.name != "Game") {
+            return;
+        }
+        Instance = null;
+        GameManager.Instance.OnSceneUnload -= Unload;
     }
 }

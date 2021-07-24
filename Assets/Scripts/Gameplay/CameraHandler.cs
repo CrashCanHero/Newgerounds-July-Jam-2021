@@ -13,9 +13,13 @@ public class CameraHandler : MonoBehaviour {
     float shakeAmount;
 
     private void Awake() {
-        if(!Instance) {
-            Instance = this;
+        if(Instance) {
+            return;
         }
+
+        Instance = this;
+        GameManager.Instance.OnSceneUnload += Unload;
+
         pos = transform.position;
     }
 
@@ -43,5 +47,13 @@ public class CameraHandler : MonoBehaviour {
         shakeTime = Time;
         shakeAmount = ShakeAmount;
         Shake = true;
+    }
+
+    void Unload(UnityEngine.SceneManagement.Scene scene) {
+        if(scene.name != "Game") {
+            return;
+        }
+        Instance = null;
+        GameManager.Instance.OnSceneUnload -= Unload;
     }
 }

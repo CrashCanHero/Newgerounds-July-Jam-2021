@@ -4,7 +4,7 @@ using UnityEngine;
 using Rewired;
 
 public class ShipController : MonoBehaviour {
-    public static ShipController Instance;
+    public static ShipController Instance { get; private set; }
 
     public const int HORIZONTAL = 0;
     public const int VERTICAL = 1;
@@ -37,9 +37,13 @@ public class ShipController : MonoBehaviour {
     }
 
     private void Awake() {
-        if(!Instance) {
-            Instance = this;
+        if(Instance) {
+            return;
         }
+
+        Instance = this;
+        GameManager.Instance.OnSceneUnload += Unload;
+
         player = ReInput.players.GetPlayer(0);
     }
 
@@ -65,6 +69,9 @@ public class ShipController : MonoBehaviour {
     }
 
     private void Update() {
+        if(!Instance) {
+            Debug.Log("AHA");
+        }
         if(Health == 0) {
             return;
         }
@@ -96,5 +103,13 @@ public class ShipController : MonoBehaviour {
             //horrible, horrible. NEVER DO THIS AGAIN
             FlashRenderer.enabled = true;
         }
+    }
+
+    void Unload(UnityEngine.SceneManagement.Scene scene) {
+        if(scene.name != "Game") {
+            return;
+        }
+        Instance = null;
+        GameManager.Instance.OnSceneUnload -= Unload;
     }
 }

@@ -15,6 +15,7 @@ public class Test_Load : MonoBehaviour
     bool visuals;
 
     IEnumerator FadeLevel() {
+        yield return new WaitForSeconds(1f);
         GlobalCanvas.Instance.FadeController.FadeOut();
         yield return new WaitForSeconds(1f);
         SceneManager.UnloadSceneAsync("Loading");
@@ -23,6 +24,7 @@ public class Test_Load : MonoBehaviour
 
     void Start()
     {
+        GlobalCanvas.Instance.FadeController.FadeIn();
         load = SceneManager.LoadSceneAsync(scene, LoadSceneMode.Additive);
     }
 

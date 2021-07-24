@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using Toolnity;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class GlobalCanvas : MonoBehaviour {
@@ -10,7 +12,7 @@ public class GlobalCanvas : MonoBehaviour {
     public Fader FadeController;
     public GameObject GameOverScreen;
     public TMP_Text GameOverText;
-    public GameObject RestartButton, QuitButton;
+    public Image RestartButton, QuitButton;
     public GameObject WinScreen;
     public TMP_Text WinText;
 
@@ -20,9 +22,19 @@ public class GlobalCanvas : MonoBehaviour {
     string winString;
     int winIndex;
 
+    IEnumerator QuitToTitle() {
+        FadeController.FadeOut();
+        yield return new WaitForSeconds(1.2f);
+        SceneManager.LoadScene("MainMenu");
+        FadeController.FadeIn();
+    }
+
     private void Awake() {
         if(!Instance) {
             Instance = this;
+        }
+        else {
+            Destroy(gameObject);
         }
     }
 
@@ -36,5 +48,39 @@ public class GlobalCanvas : MonoBehaviour {
             WinText.text += "You head home, taking whatever you could grab with you"[winIndex];
             winIndex++;
         }
+    }
+
+    public void QuitGame() {
+        StartCoroutine(QuitToTitle());
+    }
+
+    public void Restart() {
+        foreach(EnemyHealth enemy in FindObjectsOfType<EnemyHealth>()) {
+            Destroy(enemy.gameObject);
+        }
+
+        foreach(Egg egg in FindObjectsOfType<Egg>()) {
+            Destroy(egg);
+        }
+
+        LeanTween.value(1f, 0f, 1f).setOnUpdate((float value) => {
+            GameOverScreen.GetComponent<CanvasGroup>().alpha = value;
+        }).setOnComplete(() => {
+            GameOverScreen.SetActive(false);
+            GameOverScreen.GetComponent<CanvasGroup>().alpha = 1f;
+            EnemyManager.Instance.waveIndex = 0;
+            EnemyManager.Instance.MapTime = 0f;
+            EnemyManager.Instance.RunMap = true;
+            QuitButton.color = RestartButton.color = new Color(1f, 1f, 1f, 0f);
+            GameOverText.text = gameOverString = string.Empty;
+        });
+
+        FadeController.FadeIn();
+        UIHandler.Instance.UpdateHealth(5);
+        Destroy(GameObject.Find("ShipExplosion"));
+        ShipController.Instance.GetComponent<ShipEggInventory>().Eggs.Clear();
+        ShipController.Instance.gameObject.SetActive(true);
+        ShipController.Instance.transform.position = new Vector2(0f, -13.5f).To3D();
+        ShipController.Instance.Health = 5;
     }
 }
