@@ -149,7 +149,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &580196865
 RectTransform:
   m_ObjectHideFlags: 0
@@ -628,9 +628,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FadeController: {fileID: 7092163403288407080}
+  GameOverScreen: {fileID: 7092163404713223973}
   GameOverText: {fileID: 7092163404423351044}
   RestartButton: {fileID: 3659389712292635516}
   QuitButton: {fileID: 2719943438403592903}
+  WinScreen: {fileID: 580196864}
   WinText: {fileID: 564823774}
 --- !u!1 &7092163404423351045
 GameObject:
@@ -649,7 +651,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7092163404423351046
 RectTransform:
   m_ObjectHideFlags: 0
@@ -781,7 +783,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7092163404713223972
 RectTransform:
   m_ObjectHideFlags: 0
