@@ -22,6 +22,10 @@ public class EnemyHealth : MonoBehaviour {
         material = rend.material;
     }
 
+    private void OnDestroy() {
+        GameManager.Instance.EnemyCount--;
+    }
+
     private void OnTriggerEnter(Collider other) {
         if(other.GetComponent<ShipBullet>()) {
             Health--;
@@ -32,7 +36,6 @@ public class EnemyHealth : MonoBehaviour {
                 EnemyAudioHandler.Instance.PlayExplosion();
                 CameraHandler.Instance.RequestShake(0.1f, 0.1f);
                 UIHandler.Instance.Score += ScoreToAdd;
-                GameManager.Instance.EnemyCount--;
                 Destroy(gameObject);
             }
         }

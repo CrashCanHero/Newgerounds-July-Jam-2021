@@ -24,7 +24,12 @@ public class UIHandler : MonoBehaviour {
     [FoldoutGroup("Score")] public TMP_Text ScoreText;
     [FoldoutGroup("Score")] public ulong Score;
 
+    [FoldoutGroup("Credits")] public GameObject Credits;
+    [FoldoutGroup("Credits")] public RectTransform CreditsPivot;
+    [FoldoutGroup("Credits")] public Light SunLight;
+
     public TMP_Text HealthText;
+    public GameObject GameHolder;
 
     public bool InCutscne => TextBox.activeSelf;
 
@@ -44,6 +49,7 @@ public class UIHandler : MonoBehaviour {
         GameManager.Instance.OnSceneUnload += Unload;
 
         OnLastTextBox += LastTextBox;
+        ShowCredits();
     }
 
     private void Start() {
@@ -100,8 +106,8 @@ public class UIHandler : MonoBehaviour {
     }
 
     public void ShowEggInfo(Egg egg) {
-        EggName.text = egg.Stats[egg.type].Info.Name;
-        EggDescription.text = egg.Stats[egg.type].Info.Description;
+        EggName.text = egg.Infos[egg.type].Name;
+        EggDescription.text = egg.Infos[egg.type].Description;
 
         if(EggDisplayPivot.childCount > 0) {
             Destroy(EggDisplayPivot.GetChild(0).gameObject);
@@ -133,6 +139,20 @@ public class UIHandler : MonoBehaviour {
         for(int i = 0; i < health; i++) {
             HealthText.text += 'O';
         }
+    }
+
+    public void ShowCredits() {
+        GameHolder.SetActive(false);
+        Credits.SetActive(true);
+        SunLight.color = new Color(1f, 0.5f, 0f, 1f);
+        LeanTween.move(CreditsPivot, new Vector3(0f, 3600f, 0f), 80f).setOnComplete(() => {
+            LeanTween.value(1f, 1f, 5f).setOnComplete(() => {
+                GlobalCanvas.Instance.FadeController.FadeOut();
+                LeanTween.value(1f, 1f, 1f).setOnComplete(() => {
+                    GlobalCanvas.Instance.QuitGame();
+                });
+            });
+        });
     }
 
     void LastTextBox() {

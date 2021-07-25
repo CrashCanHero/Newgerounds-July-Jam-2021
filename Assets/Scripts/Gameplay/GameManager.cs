@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour {
 
     IEnumerator ShipDeath() {
         GlobalCanvas.Instance.GameOverScreen.SetActive(true);
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(2f);
         GlobalCanvas.Instance.FadeController.FadeOut();
         yield return new WaitForSeconds(2f);
         GlobalCanvas.Instance.GameOverText.gameObject.SetActive(true);

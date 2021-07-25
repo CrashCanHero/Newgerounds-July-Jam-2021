@@ -15,3 +15,6 @@ MonoBehaviour:
   Name: Happy Egg
   Description: This egg just makes you all giddy inside once you eat it, almost like
     it's happy to be eaten
+  Texture: {fileID: 2800000, guid: a08ccee59eb350749a1a429d804714ed, type: 3}
+  Tiling: {x: 1, y: 1}
+  Offset: {x: 0, y: 0}

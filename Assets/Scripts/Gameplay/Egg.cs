@@ -14,7 +14,7 @@ public class Egg : MonoBehaviour {
     readonly Vector3 movement = new Vector3(0f, 0f, -8f);
     readonly Vector3 spin = new Vector3(0f, 0f, 25f);
 
-    public EggStats[] Stats;
+    public EggInfo[] Infos;
     public EggState State = EggState.Active;
     public Transform EggPivot;
     public bool AutoDestroy;
@@ -37,8 +37,11 @@ public class Egg : MonoBehaviour {
         if(State == EggState.Display) {
             return;
         }
-        type = Random.Range(0, Stats.Length);
-        transform.GetChild(0).GetComponent<Renderer>().material.SetTexture("_BaseMap", Stats[type].Texture);
+        type = Random.Range(0, Infos.Length);
+        Material mat = transform.GetChild(0).GetComponent<Renderer>().material;
+        mat.SetTexture("_BaseMap", Infos[type].Texture);
+        mat.SetVector("_Tiling", Infos[type].Tiling);
+        mat.SetVector("_Offset", Infos[type].Offset);
         trail = GetComponent<TrailRenderer>();
     }
 
@@ -65,10 +68,4 @@ public class Egg : MonoBehaviour {
 
     public virtual void OnUseUpdate() { }
     public virtual void OnUsed() { }
-}
-
-[System.Serializable]
-public struct EggStats {
-    public EggInfo Info;
-    public Texture2D Texture;
 }

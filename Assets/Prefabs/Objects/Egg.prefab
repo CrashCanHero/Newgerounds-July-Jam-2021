@@ -222,15 +222,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9b5f52649f6d7142b27e60fe2f7bbf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Stats:
-  - Info: {fileID: 11400000, guid: eeeebc3633478d04fa19280f92107106, type: 2}
-    Texture: {fileID: 0}
-  - Info: {fileID: 11400000, guid: 7782bf9ce106b334592121fdf702918f, type: 2}
-    Texture: {fileID: 2800000, guid: a92c42ff22287754eafb6704f02348cb, type: 3}
-  - Info: {fileID: 11400000, guid: 14b27f850c7bc724dbf7019de343e036, type: 2}
-    Texture: {fileID: 2800000, guid: a08ccee59eb350749a1a429d804714ed, type: 3}
-  - Info: {fileID: 11400000, guid: 57acb96fcc42ca24680867113366fc39, type: 2}
-    Texture: {fileID: 2800000, guid: fc5fd9df9eba4fc4c85f46573a7b5e64, type: 3}
+  Infos:
+  - {fileID: 11400000, guid: eeeebc3633478d04fa19280f92107106, type: 2}
+  - {fileID: 11400000, guid: 57acb96fcc42ca24680867113366fc39, type: 2}
+  - {fileID: 11400000, guid: 14b27f850c7bc724dbf7019de343e036, type: 2}
+  - {fileID: 11400000, guid: 7782bf9ce106b334592121fdf702918f, type: 2}
+  - {fileID: 11400000, guid: e714a81122701b24c9419ebd9478618a, type: 2}
   State: 0
   EggPivot: {fileID: 1711242004076396195}
   AutoDestroy: 1

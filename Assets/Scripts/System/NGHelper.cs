@@ -23,6 +23,9 @@ public class NGHelper : MonoBehaviour {
         if(!Instance) {
             Instance = this;
         }
+        else {
+            Destroy(transform.parent.gameObject);
+        }
     }
 
     void Start() {

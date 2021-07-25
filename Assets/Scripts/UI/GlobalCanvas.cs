@@ -22,13 +22,6 @@ public class GlobalCanvas : MonoBehaviour {
     string winString;
     int winIndex;
 
-    IEnumerator QuitToTitle() {
-        FadeController.FadeOut();
-        yield return new WaitForSeconds(1.2f);
-        SceneManager.LoadScene("MainMenu");
-        FadeController.FadeIn();
-    }
-
     private void Awake() {
         if(!Instance) {
             Instance = this;
@@ -36,6 +29,10 @@ public class GlobalCanvas : MonoBehaviour {
         else {
             Destroy(gameObject);
         }
+    }
+
+    private void Start() {
+        GameManager.Instance.OnLevelComplete += GameComplete;
     }
 
     private void Update() {
@@ -51,7 +48,20 @@ public class GlobalCanvas : MonoBehaviour {
     }
 
     public void QuitGame() {
-        StartCoroutine(QuitToTitle());
+        SceneManager.LoadScene("MainMenu");
+        FadeController.FadeIn();
+
+        LeanTween.value(1f, 0f, 1f).setOnUpdate((float value) => {
+            GameOverScreen.GetComponent<CanvasGroup>().alpha = value;
+        }).setOnComplete(() => {
+            QuitButton.color = RestartButton.color = new Color(1f, 1f, 1f, 0f);
+            GameOverText.text = gameOverString = string.Empty;
+            gameOverIndex = 0;
+            winIndex = 0;
+            GameOverText.gameObject.SetActive(false);
+            GameOverScreen.SetActive(false);
+            GameOverScreen.GetComponent<CanvasGroup>().alpha = 1f;
+        });
     }
 
     public void Restart() {
@@ -63,16 +73,25 @@ public class GlobalCanvas : MonoBehaviour {
             Destroy(egg);
         }
 
+        MusicPlayer.Instance.Play();
+        UIHandler.Instance.Score = 0;
+        UIHandler.Instance.ScoreText.text = "0";
+
         LeanTween.value(1f, 0f, 1f).setOnUpdate((float value) => {
             GameOverScreen.GetComponent<CanvasGroup>().alpha = value;
         }).setOnComplete(() => {
-            GameOverScreen.SetActive(false);
-            GameOverScreen.GetComponent<CanvasGroup>().alpha = 1f;
             EnemyManager.Instance.waveIndex = 0;
             EnemyManager.Instance.MapTime = 0f;
             EnemyManager.Instance.RunMap = true;
-            QuitButton.color = RestartButton.color = new Color(1f, 1f, 1f, 0f);
-            GameOverText.text = gameOverString = string.Empty;
+            QuitButton.color = new Color(1f, 1f, 1f, 0f);
+            RestartButton.color = new Color(1f, 1f, 1f, 0f);
+            GameOverText.text = string.Empty;
+            gameOverString = string.Empty;
+            gameOverIndex = 0;
+            winIndex = 0;
+            GameOverText.gameObject.SetActive(false);
+            GameOverScreen.SetActive(false);
+            GameOverScreen.GetComponent<CanvasGroup>().alpha = 1f;
         });
 
         FadeController.FadeIn();
@@ -82,5 +101,9 @@ public class GlobalCanvas : MonoBehaviour {
         ShipController.Instance.gameObject.SetActive(true);
         ShipController.Instance.transform.position = new Vector2(0f, -13.5f).To3D();
         ShipController.Instance.Health = 5;
+    }
+
+    void GameComplete() {
+
     }
 }

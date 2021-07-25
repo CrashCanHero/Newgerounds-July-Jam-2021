@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ade534898a38754ca9c0e8ed81f2633, type: 3}
   m_Name: Joe Tasks
   m_EditorClassIdentifier: 
-  tasks:
+  tasks: []
+  completedTasks:
   - description: Setup audio mixer
     parameter2Id: 2
     paramerer1Id: 3
-  completedTasks: []
   parameters1:
   - Design
   - Art

@@ -29,6 +29,7 @@ public class CameraHandler : MonoBehaviour {
         }
 
         pos.x = Target.position.x / ParallaxAmount;
+        pos.z = 0f;
 
         if(Shake) {
             pos += Random.insideUnitCircle.To3D() * shakeAmount;
