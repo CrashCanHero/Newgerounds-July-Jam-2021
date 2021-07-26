@@ -256,9 +256,24 @@ MonoBehaviour:
   - Type: 11
     Offset: {x: 0, y: -0.75}
     Time: 122.15
+  - Type: 8
+    Offset: {x: 0, y: 0}
+    Time: 124
   - Type: 4
     Offset: {x: -15, y: 0}
     Time: 125
   - Type: 4
     Offset: {x: 15, y: 0}
     Time: 125
+  - Type: 6
+    Offset: {x: 0, y: 0}
+    Time: 130
+  - Type: 6
+    Offset: {x: 5, y: -1}
+    Time: 134
+  - Type: 11
+    Offset: {x: 0, y: 0}
+    Time: 138
+  - Type: 14
+    Offset: {x: 0, y: 0}
+    Time: 139.2

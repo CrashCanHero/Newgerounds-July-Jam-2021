@@ -15,6 +15,7 @@ public class GlobalCanvas : MonoBehaviour {
     public Image RestartButton, QuitButton;
     public GameObject WinScreen;
     public TMP_Text WinText;
+    public AudioClip RockIntro, RockLoop;
 
     public bool EndSequence;
 
@@ -110,6 +111,7 @@ public class GlobalCanvas : MonoBehaviour {
         FadeController.FadeOut();
         WinScreen.SetActive(true);
         WinText.gameObject.SetActive(true);
+        MusicPlayer.Instance.Stop();
 
         LeanTween.value(1f, 1f, 4f).setOnComplete(() => {
             Restart();
@@ -118,6 +120,9 @@ public class GlobalCanvas : MonoBehaviour {
             });
             UIHandler.Instance.ShowCredits();
             WinScreen.SetActive(false);
+            MusicPlayer.Instance.IntroSource.clip = RockIntro;
+            MusicPlayer.Instance.LoopSource.clip = RockLoop;
+            MusicPlayer.Instance.Play();
         });
     }
 }
