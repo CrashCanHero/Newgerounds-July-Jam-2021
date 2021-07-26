@@ -277,3 +277,9 @@ MonoBehaviour:
   - Type: 14
     Offset: {x: 0, y: 0}
     Time: 139.2
+  - Type: 5
+    Offset: {x: 0, y: 0}
+    Time: 145
+  - Type: 7
+    Offset: {x: 0, y: 0}
+    Time: 147
