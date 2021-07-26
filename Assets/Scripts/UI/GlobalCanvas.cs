@@ -16,6 +16,8 @@ public class GlobalCanvas : MonoBehaviour {
     public GameObject WinScreen;
     public TMP_Text WinText;
 
+    public bool EndSequence;
+
     string gameOverString;
     int gameOverIndex;
 
@@ -104,9 +106,18 @@ public class GlobalCanvas : MonoBehaviour {
     }
 
     void GameComplete() {
+        EndSequence = true;
         FadeController.FadeOut();
-        FadeController.SetColor(Color.white);
         WinScreen.SetActive(true);
         WinText.gameObject.SetActive(true);
+
+        LeanTween.value(1f, 1f, 4f).setOnComplete(() => {
+            Restart();
+            LeanTween.value(1f, 1f, 1.5f).setOnComplete(() => {
+                EnemyManager.Instance.RunMap = false;
+            });
+            UIHandler.Instance.ShowCredits();
+            WinScreen.SetActive(false);
+        });
     }
 }

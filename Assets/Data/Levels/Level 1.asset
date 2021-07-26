@@ -205,3 +205,60 @@ MonoBehaviour:
   - Type: 10
     Offset: {x: 0, y: 1}
     Time: 113
+  - Type: 9
+    Offset: {x: 0, y: -1}
+    Time: 114
+  - Type: 10
+    Offset: {x: 0, y: -1}
+    Time: 114
+  - Type: 9
+    Offset: {x: 0, y: -5}
+    Time: 115
+  - Type: 10
+    Offset: {x: 0, y: -5}
+    Time: 115
+  - Type: 8
+    Offset: {x: -4, y: 0}
+    Time: 115.5
+  - Type: 9
+    Offset: {x: 0, y: 7}
+    Time: 116
+  - Type: 10
+    Offset: {x: 0, y: 7}
+    Time: 116
+  - Type: 9
+    Offset: {x: 0, y: -5}
+    Time: 117
+  - Type: 10
+    Offset: {x: 0, y: -5}
+    Time: 117
+  - Type: 9
+    Offset: {x: 0, y: 9}
+    Time: 118
+  - Type: 10
+    Offset: {x: 0, y: 9}
+    Time: 118
+  - Type: 5
+    Offset: {x: 0, y: 0}
+    Time: 118.5
+  - Type: 3
+    Offset: {x: 0, y: 0}
+    Time: 119
+  - Type: 3
+    Offset: {x: 0, y: 0}
+    Time: 119.8
+  - Type: 3
+    Offset: {x: 0, y: 0}
+    Time: 120.6
+  - Type: 11
+    Offset: {x: 0, y: 0}
+    Time: 121
+  - Type: 11
+    Offset: {x: 0, y: -0.75}
+    Time: 122.15
+  - Type: 4
+    Offset: {x: -15, y: 0}
+    Time: 125
+  - Type: 4
+    Offset: {x: 15, y: 0}
+    Time: 125
