@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a493a11cd0348ee47bbf83938e5b89b6, type: 3}
   m_Name: Carbon Fiber Egg
   m_EditorClassIdentifier: 
-  Name: Carbin Fiber Egg
+  Name: Carbon Fiber Egg
   Description: Near impossible to crack, but very worth it
   Texture: {fileID: 2800000, guid: 2c2248ff62e898748b15abd659ebc2d4, type: 3}
   Tiling: {x: 100, y: 100}

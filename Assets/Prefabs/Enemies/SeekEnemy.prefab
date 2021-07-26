@@ -53,6 +53,7 @@ MonoBehaviour:
   Health: 3
   rend: {fileID: 1493589790857210783}
   DeathEffect: {fileID: 1884954727708983416, guid: 3392abacf0172884e80d413ee51d48ac, type: 3}
+  HealthUp: {fileID: 6882957477858433857, guid: 3770813da3a6dae45b7380d4df2c3b26, type: 3}
   ScoreToAdd: 150
 --- !u!65 &160239093265086042
 BoxCollider:
@@ -259,7 +260,7 @@ PrefabInstance:
     - target: {fileID: 1541998606474349963, guid: acb002c930ce01e4dac6799f756b8bb4, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 889236c9dfe04ba47b9ba4156cbff3c7, type: 2}
+      objectReference: {fileID: 2100000, guid: dcf5a3aa1b94c1c41bdbfc25d35d316d, type: 2}
     - target: {fileID: 9013638940889411661, guid: acb002c930ce01e4dac6799f756b8bb4, type: 3}
       propertyPath: m_Layer
       value: 3

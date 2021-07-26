@@ -23,7 +23,7 @@ public class ShipController : MonoBehaviour {
     public float FlashTime;
     public Renderer FlashRenderer;
 
-    public AudioSource Shoot, Hurt, Death;
+    public AudioSource Shoot, Hurt, Death, HealthUp;
     public GameObject DeathEffect;
 
     float shootTimer;
@@ -48,6 +48,14 @@ public class ShipController : MonoBehaviour {
     }
 
     private void OnTriggerEnter(Collider other) {
+        if(other.gameObject.name == "Health" && Health < 5) {
+            Health++;
+            UIHandler.Instance.UpdateHealth(Health);
+            HealthUp.Play();
+            Destroy(other.gameObject);
+            return;
+        }
+
         if((other.GetComponent<EnemyHealth>() || other.GetComponent<EnemyBullet>()) && iTimer <= 0f) {
             Health--;
             Health = Mathf.Clamp(Health, 0, 5);
@@ -76,7 +84,7 @@ public class ShipController : MonoBehaviour {
             return;
         }
         bool shooting = player.GetButton(SHOOT);
-        transform.position += GetAxis.To3D() * MoveSpeed * Time.deltaTime * (player.GetButton(SLOW) ? 0.2f : 1f) * (UIHandler.Instance.InCutscne ? 0f : 1f) * (shooting ? 0.8f : 1f);
+        transform.position += GetAxis.To3D() * MoveSpeed * Time.deltaTime * (player.GetButton(SLOW) ? 0.5f : 1f) * (UIHandler.Instance.InCutscne ? 0f : 1f) * (shooting ? 0.8f : 1f);
         transform.position = new Vector3(Mathf.Clamp(transform.position.x, -Limits.x, Limits.x), 0f, Mathf.Clamp(transform.position.z, -Limits.y, Limits.y));
 
         if(player.GetButtonDown(SHOOT) && !UIHandler.Instance.InCutscne) {

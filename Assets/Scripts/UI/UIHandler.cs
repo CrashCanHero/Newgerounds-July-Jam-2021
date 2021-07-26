@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Sirenix.OdinInspector;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class UIHandler : MonoBehaviour {
     public static UIHandler Instance;
@@ -28,6 +29,8 @@ public class UIHandler : MonoBehaviour {
     [FoldoutGroup("Credits")] public RectTransform CreditsPivot;
     [FoldoutGroup("Credits")] public Light SunLight;
 
+    [FoldoutGroup("Pause Screen")] public GameObject PauseHolder;
+
     public TMP_Text HealthText;
     public GameObject GameHolder;
 
@@ -39,6 +42,7 @@ public class UIHandler : MonoBehaviour {
     bool eggDescActive;
     float eggTimer;
     ulong visualScore;
+    bool paused;
 
     private void Awake() {
         if(Instance) {
@@ -49,7 +53,6 @@ public class UIHandler : MonoBehaviour {
         GameManager.Instance.OnSceneUnload += Unload;
 
         OnLastTextBox += LastTextBox;
-        ShowCredits();
     }
 
     private void Start() {
@@ -63,6 +66,10 @@ public class UIHandler : MonoBehaviour {
     }
 
     private void Update() {
+
+        if(Input.GetKeyDown(KeyCode.Return)) {
+            CyclePaused();
+        }
 
         if(TextBox.activeSelf) {
             if(textIndex < NextText.Length) {
@@ -145,6 +152,8 @@ public class UIHandler : MonoBehaviour {
         GameHolder.SetActive(false);
         Credits.SetActive(true);
         SunLight.color = new Color(1f, 0.5f, 0f, 1f);
+
+        //I have failed all who teach me and this is the reason why
         LeanTween.move(CreditsPivot, new Vector3(0f, 3600f, 0f), 80f).setOnComplete(() => {
             LeanTween.value(1f, 1f, 5f).setOnComplete(() => {
                 GlobalCanvas.Instance.FadeController.FadeOut();
@@ -155,6 +164,17 @@ public class UIHandler : MonoBehaviour {
         });
     }
 
+    public void QuitGame() {
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    public void CyclePaused() {
+        paused = !paused;
+        Time.timeScale = paused ? 0f : 1f;
+
+        GameHolder.SetActive(!paused);
+        PauseHolder.SetActive(paused);
+    }
     void LastTextBox() {
         EnemyManager.Instance.RunMap = true;
     }

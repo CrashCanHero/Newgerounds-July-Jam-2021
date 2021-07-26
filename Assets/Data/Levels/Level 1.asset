@@ -100,3 +100,108 @@ MonoBehaviour:
   - Type: 3
     Offset: {x: 0, y: 0}
     Time: 68
+  - Type: 8
+    Offset: {x: 0, y: 0}
+    Time: 68.1
+  - Type: 5
+    Offset: {x: 0, y: 0}
+    Time: 69
+  - Type: 4
+    Offset: {x: 0, y: 0}
+    Time: 72
+  - Type: 4
+    Offset: {x: -15, y: 0}
+    Time: 72
+  - Type: 4
+    Offset: {x: 15, y: 0}
+    Time: 72
+  - Type: 3
+    Offset: {x: -7.5, y: 0}
+    Time: 77
+  - Type: 3
+    Offset: {x: 7.5, y: 0}
+    Time: 77
+  - Type: 5
+    Offset: {x: 0, y: 0}
+    Time: 79
+  - Type: 5
+    Offset: {x: 7.5, y: 0}
+    Time: 79.1
+  - Type: 8
+    Offset: {x: 0, y: 0}
+    Time: 81
+  - Type: 3
+    Offset: {x: -15, y: 0}
+    Time: 83
+  - Type: 3
+    Offset: {x: 15, y: 0}
+    Time: 83
+  - Type: 3
+    Offset: {x: 0, y: 0}
+    Time: 83
+  - Type: 6
+    Offset: {x: 0, y: 0}
+    Time: 84.3
+  - Type: 9
+    Offset: {x: 0, y: -10}
+    Time: 88
+  - Type: 10
+    Offset: {x: 0, y: -10}
+    Time: 90
+  - Type: 13
+    Offset: {x: 0, y: 0}
+    Time: 94
+  - Type: 8
+    Offset: {x: 0, y: 0}
+    Time: 96
+  - Type: 14
+    Offset: {x: 0, y: 0}
+    Time: 98
+  - Type: 1
+    Offset: {x: -15, y: 0}
+    Time: 102
+  - Type: 1
+    Offset: {x: -10, y: 0}
+    Time: 102
+  - Type: 1
+    Offset: {x: 10, y: 0}
+    Time: 102
+  - Type: 1
+    Offset: {x: 15, y: 0}
+    Time: 102
+  - Type: 9
+    Offset: {x: 0, y: 0}
+    Time: 105
+  - Type: 10
+    Offset: {x: 0, y: 0}
+    Time: 105
+  - Type: 9
+    Offset: {x: 0, y: 0}
+    Time: 109
+  - Type: 10
+    Offset: {x: 0, y: 0}
+    Time: 109
+  - Type: 9
+    Offset: {x: 0, y: 5}
+    Time: 110
+  - Type: 10
+    Offset: {x: 0, y: 5}
+    Time: 110
+  - Type: 9
+    Offset: {x: 0, y: -3}
+    Time: 111
+  - Type: 10
+    Offset: {x: 0, y: -3}
+    Time: 111
+  - Type: 9
+    Offset: {x: 0, y: 4}
+    Time: 112
+  - Type: 10
+    Offset: {x: 0, y: 4}
+    Time: 112
+  - Type: 9
+    Offset: {x: 0, y: 1}
+    Time: 113
+  - Type: 10
+    Offset: {x: 0, y: 1}
+    Time: 113

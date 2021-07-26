@@ -6,6 +6,7 @@ public class EnemyHealth : MonoBehaviour {
     public int Health;
     public Renderer rend;
     public GameObject DeathEffect;
+    public GameObject HealthUp;
     public ulong ScoreToAdd;
     Material material;
 
@@ -36,6 +37,13 @@ public class EnemyHealth : MonoBehaviour {
                 EnemyAudioHandler.Instance.PlayExplosion();
                 CameraHandler.Instance.RequestShake(0.1f, 0.1f);
                 UIHandler.Instance.Score += ScoreToAdd;
+
+                int rand = Random.Range(0, 100);
+
+                if(rand > 25 && rand < 42) {
+                    Instantiate(HealthUp, transform.position, Quaternion.identity);
+                }
+
                 Destroy(gameObject);
             }
         }

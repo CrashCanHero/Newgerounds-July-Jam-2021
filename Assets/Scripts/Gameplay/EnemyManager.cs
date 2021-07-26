@@ -13,6 +13,12 @@ public enum EnemyWaveType {
     SawEnemiesFromTopLeft,
     ShooterEnemiesFromTop,
     Egg,
+    SingleSideFromLeft,
+    SingleSideFromRight,
+    SideFromLeftBottomFirst,
+    SideFromRightBottomFirst,
+    SideFromLeftTopFirst,
+    SideFromRIghtTopFirst
 }
 
 public class EnemyManager : MonoBehaviour {

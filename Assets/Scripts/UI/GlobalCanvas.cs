@@ -70,7 +70,7 @@ public class GlobalCanvas : MonoBehaviour {
         }
 
         foreach(Egg egg in FindObjectsOfType<Egg>()) {
-            Destroy(egg);
+            Destroy(egg.gameObject);
         }
 
         MusicPlayer.Instance.Play();
@@ -104,6 +104,9 @@ public class GlobalCanvas : MonoBehaviour {
     }
 
     void GameComplete() {
-
+        FadeController.FadeOut();
+        FadeController.SetColor(Color.white);
+        WinScreen.SetActive(true);
+        WinText.gameObject.SetActive(true);
     }
 }

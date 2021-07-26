@@ -223,11 +223,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Infos:
-  - {fileID: 11400000, guid: eeeebc3633478d04fa19280f92107106, type: 2}
   - {fileID: 11400000, guid: 57acb96fcc42ca24680867113366fc39, type: 2}
   - {fileID: 11400000, guid: 14b27f850c7bc724dbf7019de343e036, type: 2}
+  - {fileID: 11400000, guid: eeeebc3633478d04fa19280f92107106, type: 2}
   - {fileID: 11400000, guid: 7782bf9ce106b334592121fdf702918f, type: 2}
   - {fileID: 11400000, guid: e714a81122701b24c9419ebd9478618a, type: 2}
+  - {fileID: 11400000, guid: f1d5995e8e9c3cd4fa98d49825a2ad33, type: 2}
   State: 0
   EggPivot: {fileID: 1711242004076396195}
   AutoDestroy: 1

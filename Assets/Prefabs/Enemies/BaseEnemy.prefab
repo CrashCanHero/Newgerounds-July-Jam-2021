@@ -168,6 +168,7 @@ MonoBehaviour:
   Health: 3
   rend: {fileID: 1735341401658410694}
   DeathEffect: {fileID: 1884954727708983416, guid: 3392abacf0172884e80d413ee51d48ac, type: 3}
+  HealthUp: {fileID: 6882957477858433857, guid: 3770813da3a6dae45b7380d4df2c3b26, type: 3}
   ScoreToAdd: 100
 --- !u!65 &4513638705498717586
 BoxCollider:
@@ -354,7 +355,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d5c751ad3be667b4f9dccb0c13edc5e8, type: 2}
+  - {fileID: 2100000, guid: dcf5a3aa1b94c1c41bdbfc25d35d316d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
