@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a493a11cd0348ee47bbf83938e5b89b6, type: 3}
+  m_Name: Purple
+  m_EditorClassIdentifier: 
+  Name: Purple Egg
+  Description: It's purple, Fuck you.
+  Texture: {fileID: 2800000, guid: 2cf0411fa7fc88547803ddea92b46a1c, type: 3}
+  Tiling: {x: 1, y: 1}
+  Offset: {x: 0, y: 0}
