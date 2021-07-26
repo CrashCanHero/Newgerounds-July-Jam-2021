@@ -40,7 +40,7 @@ public class EnemyHealth : MonoBehaviour {
 
                 int rand = Random.Range(0, 100);
 
-                if(rand > 25 && rand < 42) {
+                if(Mathf.Abs(rand - 30) < 5) {
                     Instantiate(HealthUp, transform.position, Quaternion.identity);
                 }
 

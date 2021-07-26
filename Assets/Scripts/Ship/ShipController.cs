@@ -48,7 +48,7 @@ public class ShipController : MonoBehaviour {
     }
 
     private void OnTriggerEnter(Collider other) {
-        if(other.gameObject.name == "Health" && Health < 5) {
+        if(other.GetComponent<HealthSpin>() && Health < 5) {
             Health++;
             UIHandler.Instance.UpdateHealth(Health);
             HealthUp.Play();

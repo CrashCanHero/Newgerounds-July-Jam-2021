@@ -716,7 +716,7 @@ MonoBehaviour:
   Shoot: {fileID: 111880216}
   Hurt: {fileID: 111880217}
   Death: {fileID: 963194231}
-  HealthUp: {fileID: 0}
+  HealthUp: {fileID: 111880220}
   DeathEffect: {fileID: 7166490800621890788, guid: ff402cbe714b0bd44a1103a3b9eecd91, type: 3}
 --- !u!54 &111880214
 Rigidbody:
