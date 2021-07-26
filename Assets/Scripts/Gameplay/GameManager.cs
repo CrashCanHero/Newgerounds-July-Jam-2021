@@ -51,7 +51,7 @@ public class GameManager : MonoBehaviour {
 
     private void Update() {
         if(lastEnemyCount != EnemyCount) {
-            if(EnemyManager.Instance && !EnemyManager.Instance.RunMap && EnemyCount == 0) {
+            if(EnemyManager.Instance && !EnemyManager.Instance.RunMap && EnemyCount == 0 && EnemyManager.Instance.waveIndex == EnemyManager.Instance.CurrentLevel.Waves.Length) {
                 try
                 {
                     NGHelper.Instance.unlockMedal(64394);
