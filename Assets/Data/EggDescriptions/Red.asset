@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: Red
   m_EditorClassIdentifier: 
   Name: Red Egg
-  Description: The normal egg but red. Keeps asking why the hell he is in an egg,
-    where is disuko.
+  Description: The normal egg but red. Keeps asking "Why am I an egg, where is disuko".
   Texture: {fileID: 2800000, guid: 6e28f44f4a0bde44babbb13f1fe3d8dd, type: 3}
   Tiling: {x: 1, y: 1}
   Offset: {x: 0, y: 0}

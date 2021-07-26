@@ -15,5 +15,5 @@ MonoBehaviour:
   Name: Dio
   Description: You thought you got an egg, but it was I! DIO!
   Texture: {fileID: 2800000, guid: eb3954bd121a60b4d948e59252775da4, type: 3}
-  Tiling: {x: 1, y: 1}
+  Tiling: {x: 2, y: 1}
   Offset: {x: 0, y: 0}

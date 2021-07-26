@@ -57,13 +57,7 @@ public class NGHelper : MonoBehaviour {
     private void onLoggedIn() {
         UserNG = Ngio_core.current_user;
         PlayerText.text = UserNG.name;
-        io.newgrounds.components.ScoreBoard.getScores userScore = new io.newgrounds.components.ScoreBoard.getScores();
-        userScore.id = 0;
-        userScore.user = UserNG.id;
-        userScore.social = false;
-        userScore.period = "A";
-        userScore.callWith(Ngio_core);
-        StartCoroutine(GetTexture(UserNG.icons.large));
+        unlockMedal(63942);
     }
 
     public void unlockMedal(int MedalID) {

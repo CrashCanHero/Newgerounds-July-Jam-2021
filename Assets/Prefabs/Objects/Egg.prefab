@@ -222,13 +222,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9b5f52649f6d7142b27e60fe2f7bbf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  eggstatMedal: 87fb000088fb000089fb00008bfb00008cfb00008dfb00008efb00008ffb000090fb000091fb0000
   Infos:
-  - {fileID: 11400000, guid: 57acb96fcc42ca24680867113366fc39, type: 2}
-  - {fileID: 11400000, guid: 14b27f850c7bc724dbf7019de343e036, type: 2}
-  - {fileID: 11400000, guid: eeeebc3633478d04fa19280f92107106, type: 2}
-  - {fileID: 11400000, guid: 7782bf9ce106b334592121fdf702918f, type: 2}
+  - {fileID: 11400000, guid: 2a2a58e70b0b1cd4eab1bd628a76e00c, type: 2}
+  - {fileID: 11400000, guid: a45b4a2723c5a844187928a8b1ce9379, type: 2}
+  - {fileID: 11400000, guid: d05eda41995e18943b9be900fb12b371, type: 2}
+  - {fileID: 11400000, guid: 14725d597d1c08145b54f203a0c69cfa, type: 2}
+  - {fileID: 11400000, guid: fc1fdbeceed34cb488f1a53481e3be16, type: 2}
+  - {fileID: 11400000, guid: 6b02162a2a3fd334c8aa00db67706ec0, type: 2}
+  - {fileID: 11400000, guid: 5d7d9c85db8ca3f46a324885513cfd82, type: 2}
+  - {fileID: 11400000, guid: 7953a8b88a107cf4fb789382a7981e28, type: 2}
+  - {fileID: 11400000, guid: a4d53028a828bba489835206c3e016cc, type: 2}
+  - {fileID: 11400000, guid: 8655f54a18abe4c4db6d12a7bd60b04c, type: 2}
   - {fileID: 11400000, guid: e714a81122701b24c9419ebd9478618a, type: 2}
   - {fileID: 11400000, guid: f1d5995e8e9c3cd4fa98d49825a2ad33, type: 2}
+  - {fileID: 11400000, guid: eeeebc3633478d04fa19280f92107106, type: 2}
+  - {fileID: 11400000, guid: 57acb96fcc42ca24680867113366fc39, type: 2}
+  - {fileID: 11400000, guid: 14b27f850c7bc724dbf7019de343e036, type: 2}
+  - {fileID: 11400000, guid: 7782bf9ce106b334592121fdf702918f, type: 2}
   State: 0
   EggPivot: {fileID: 1711242004076396195}
   AutoDestroy: 1

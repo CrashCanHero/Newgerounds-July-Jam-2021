@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Toolnity;
+using System;
 
 public class GameManager : MonoBehaviour {
     public static GameManager Instance;
@@ -51,6 +52,14 @@ public class GameManager : MonoBehaviour {
     private void Update() {
         if(lastEnemyCount != EnemyCount) {
             if(EnemyManager.Instance && !EnemyManager.Instance.RunMap && EnemyCount == 0) {
+                try
+                {
+                    NGHelper.Instance.unlockMedal(64394);
+                }
+                catch (Exception e) 
+                {
+                    Debug.Log(e.Message);
+                }
                 OnLevelComplete?.Invoke();
             }
             lastEnemyCount = EnemyCount;

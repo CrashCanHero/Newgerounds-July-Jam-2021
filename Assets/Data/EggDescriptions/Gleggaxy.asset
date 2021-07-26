@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Galeggaxy
   Description: Not much is known about this egg...
-  Texture: {fileID: 0}
-  Tiling: {x: 1, y: 1}
+  Texture: {fileID: 2800000, guid: 8c3322e226c9d0342b39d487af302b05, type: 3}
+  Tiling: {x: 2, y: 1}
   Offset: {x: 0, y: 0}
