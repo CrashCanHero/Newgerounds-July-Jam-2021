@@ -55,6 +55,7 @@ public class GameManager : MonoBehaviour {
                 try
                 {
                     NGHelper.Instance.unlockMedal(64394);
+                    NGHelper.Instance.uploadScore(10453, GameObject.Find("[#2D6464]Egg Holder").transform.childCount);
                 }
                 catch (Exception e) 
                 {
