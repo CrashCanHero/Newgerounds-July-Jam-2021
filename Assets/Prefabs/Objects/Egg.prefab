@@ -222,7 +222,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9b5f52649f6d7142b27e60fe2f7bbf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eggstatMedal: 87fb000088fb000089fb00008bfb00008cfb00008dfb00008efb00008ffb000090fb000091fb0000
+  eggstatMedal: 87fb000088fb000089fb00008bfb00008cfb00008dfb00008efb00008ffb000090fb000091fb000094fb000095fb000096fb000097fb000098fb000099fb0000
   Infos:
   - {fileID: 11400000, guid: 2a2a58e70b0b1cd4eab1bd628a76e00c, type: 2}
   - {fileID: 11400000, guid: a45b4a2723c5a844187928a8b1ce9379, type: 2}

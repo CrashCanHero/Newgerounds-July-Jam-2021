@@ -14,7 +14,7 @@ public enum EggState {
 public class Egg : MonoBehaviour {
     readonly Vector3 movement = new Vector3(0f, 0f, -8f);
     readonly Vector3 spin = new Vector3(0f, 0f, 25f);
-    public int[] eggstatMedal = new int[] { 64391, 64392,64393,64395,64396,64397,64398,64399,64400,64401,64404,64405,64406,64407,64408,64409 };
+    public int[] eggstatMedal = new int[] { 64391, 64392, 64393, 64395, 64396, 64397, 64398, 64399, 64400, 64401, 64404, 64405, 64406, 64407, 64408, 64409 };
 
     public EggInfo[] Infos;
     public EggState State = EggState.Active;
