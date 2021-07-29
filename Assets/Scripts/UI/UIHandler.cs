@@ -67,7 +67,7 @@ public class UIHandler : MonoBehaviour {
 
     private void Update() {
 
-        if(Input.GetKeyDown(KeyCode.Return) && !GlobalCanvas.Instance.EndSequence) {
+        if(Input.GetKeyDown(KeyCode.Escape) && !GlobalCanvas.Instance.EndSequence) {
             CyclePaused();
         }
 
